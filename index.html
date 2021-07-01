@@ -9,9 +9,9 @@
         span{
     color: red;
         }
-        table,tr,td {
+        table,tr,td{
             border: 1px solid black;
-            border-collapse: collapse;           
+            border-collapse: collapse;        
            }
            .textBox{  
                 background-image: url("digi.png");
@@ -24,6 +24,7 @@ hr{
 }
         *{
             margin: 0px;
+            overflow-x: hidden;
         }
        </style>
 </head>
@@ -33,9 +34,8 @@ hr{
 <h4 style="text-align: center;">Request for New Pan Card / Corrections in Pan Card </h4>
 <p style = "font-style: italic;text-align: center; font-weight: lighter;">Field Marked with <span>*</span>(asterisk) are Mandatory. To  avoid mistake(s), please refer <u> guidelines</u> and <u>instructions </u></p>
 </div>
-<div style="font-weight: bold;">
-    <table width = 100%>
-        <tr>
+    <table style="font-weight: bold;" width=100%>
+         <tr>
             <td></td>
             <td colspan="2"> <span>*</span> Whether Citizen of India
                 <label for="yes" style="padding-left: 50px; font-weight: lighter;">Yes</label>
@@ -47,7 +47,7 @@ hr{
         <tr>
             <td></td>
             <td colspan="2"><span>*</span> Permanent Account Number(PAN)
-                <input style="margin-left: 20px;" type="text">
+                <input style="margin-left: 20px;" type="text" id="pan" autofocus="autofocus">
             </td>
             </tr>
             <tr>
@@ -86,12 +86,12 @@ hr{
             <tr>
                 <td></td>
                 <td colspan="2">
-                    <span>*</span> Name as you would like to print on the card font <p style="color: rgb(45, 30, 179); display: inline;"> (Prefix like Shri, Smt, Kumari, Dr, Mr, Ms, Mrs, etc are not allowed) </p>
+                    <span>*</span> Name as you would like to print on the card front <p style="color: rgb(45, 30, 179); display: inline;"> (Prefix like Shri, Smt, Kumari, Dr, Mr, Ms, Mrs, etc are not allowed) </p>
                 </td>
             </tr>
             <tr>
                <td></td>
-               <td colspan="2"><input type="text" value="" id="" size="40"></td>                
+               <td colspan="2"><input type="text" value="" id="name" size="40" name="cardname"></td>                
             </tr>
             <tr>
                 <td></td>
@@ -121,14 +121,14 @@ hr{
                     <td></td>
                     <td colspan="2">
                         <div style="display: inline-block; width: 33%;">
-                        <label for="firstname">First Name</label><br>
-                        <input type="text" value="" id="firstname"> </div>
+                        <label for="firstnam">First Name</label><br>
+                        <input type="text" value="" id="firstnam"> </div>
                         <div style="display: inline-block; width: 33%;">
-                            <label for="lastname">Last Name/ Sur Name</label><br>
-                            <input type="text" value="" id="lastname"> </div>
+                            <label for="lastnam">Last Name/ Sur Name</label><br>
+                            <input type="text" value="" id="lastnam"> </div>
                             <div style="display: inline-block; width: 33%;">
-                                <label for="middlename">Middle Name</label><br>
-                                <input type="text" value="" id="middlename"> </div>
+                                <label for="middlenam">Middle Name</label><br>
+                                <input type="text" value="" id="middlenam"> </div>
                     </td>
                 </tr>
                 <tr>
@@ -143,14 +143,14 @@ hr{
                     <td></td>
                     <td colspan="2">
                         <div style="display: inline-block; width: 33%;">
-                        <label for="firstname">First Name</label><br>
-                        <input type="text" value="" id="firstname"> </div>
+                        <label for="firstna">First Name</label><br>
+                        <input type="text" value="" id="firstna"> </div>
                         <div style="display: inline-block; width: 33%;">
-                            <label for="lastname">Last Name/ Sur Name</label><br>
-                            <input type="text" value="" id="lastname"> </div>
+                            <label for="lastna">Last Name/ Sur Name</label><br>
+                            <input type="text" value="" id="lastna"> </div>
                             <div style="display: inline-block; width: 33%;">
-                                <label for="middlename">Middle Name</label><br>
-                                <input type="text" value="" id="middlename"> </div>
+                                <label for="middlena">Middle Name</label><br>
+                                <input type="text" value="" id="middlena"> </div>
                     </td>
                 </tr>
     <tr>
@@ -274,42 +274,42 @@ hr{
     <td></td>
     <td width=50%>Office Name <p style="font-weight: lighter; display: inline;">(to be filled only in case of office address)</p></td>
                 <td>
-                    <input type="text" value="" id="text" size="45"> 
+                    <input type="text" value="" id="offc" size="45"> 
                 </td>
 </tr>
 <tr>
     <td></td>
     <td width=50%>Flat/Door/Block No. </td>
                 <td>
-                    <input type="text" value="" id="text" size="40"> 
+                    <input type="text" value="" id="flat" size="40" name="doorno"> 
                 </td>
 </tr>
 <tr>
     <td></td>
                 <td width=50%>Name of Premises/Building/Village</td>
                 <td>
-                    <input type="text" value="" id="text" size="40"> 
+                    <input type="text" value="" id="pre" size="40" name="premises"> 
                 </td>
 </tr>
 <tr>
     <td></td>
                <td width=50%>Road/Street/Lane/Post Office</td>
                 <td>
-                    <input type="text" value="" id="text" size="40"> 
+                    <input type="text" value="" id="road" size="40" name="road"> 
                 </td>
 </tr>
 <tr>
     <td></td>
                 <td width=50%>Area/Locality/Taluk/Sub-Division</td>
                 <td>
-                    <input type="text" value="" id="text" size="40"> 
+                    <input type="text" value="" id="area" size="40" name="area"> 
                 </td>
 </tr>
 <tr>
     <td></td>
                     <td width=50%>Town/City/District</td>
                 <td>
-                    <input type="text" value="" id="text" size="40"> 
+                    <input type="text" value="" id="twon" size="40" name="city"> 
                 </td>
 </tr>
 <tr>
@@ -360,7 +360,7 @@ hr{
     <td></td>
                     <td width=50%>PIN <p style="font-weight: lighter; display: inline;">(Entering PIN is mandatory)</p></td>
                 <td>
-                    <input type="text" value="" id="text" size="20" maxlength="6"> 
+                    <input type="text" value="" id="pin" size="20" maxlength="6" name="pin"> 
                 </td>
 </tr>
 <tr>
@@ -621,7 +621,7 @@ hr{
     <td></td>
                    <td width=50%>zip</td>
                 <td>
-                    <input type="text" value="" id="text" size="20"> 
+                    <input type="text" value="" id="zip" size="20" name="zip"> 
                 </td>
 </tr>
 <tr>
@@ -672,7 +672,7 @@ hr{
     <td></td>
     <td width=50%>E-mail ID</td>
                 <td>
-                    <input type="text" value="" id="text" size="40"> 
+                    <input type="text" value="" id="email" size="40" name="email"> 
                 </td>
 </tr>
 <tr>
@@ -691,7 +691,7 @@ hr{
     </td>  
                 <td width=50%> <span>*</span> AADHAAR Number</td>
                 <td>
-                    <input type="text" value="" id="text" size="40"> <br>
+                    <input type="text" value="" id="aadhar" size="40" name="aadhar"> <br>
                     <p style="color: royalblue;font-size: 12px; font-weight: bold;" >In case AADHAAR number is provided, <br>
                     then proof of AADHAAR along with supporting documents is to be submitted to NSDL</p>
                 </td>
@@ -704,13 +704,13 @@ or <br>
 as per the enrollment ID of AADHAAR application form </p>
               </td>
               <td>
-<input type="text" size="60">
+<input type="text" size="60" id="asp">
               </td>
 </tr>
 <tr>
    <td></td>  
    <td>GSTIN</td>
-   <td></td><input type="text" name="" id=""></td>
+   <td><input type="text" name="" id="gstin" name="gstin"></td>
 </tr>
 <tr>
     <td width = 2%>
@@ -749,14 +749,14 @@ as per the enrollment ID of AADHAAR application form </p>
 <tr>
     <td></td>
     <td colspan="2">
-    <p style="font-weight: lighter;"> I/we <input type="text" style="padding-left: 10px;">, the applicant,in the capacity of <select name="option" id="op"> <option value="op">---Please Select---</option></select>
+    <p style="font-weight: lighter;"> I/we <input type="text" style="padding-left: 10px;" id="ux">, the applicant,in the capacity of <select name="option" id="op"> <option value="op">---Please Select---</option></select>
     do hereby declare that what stated above is true to best of my knowledge and belief. <br>
-    I have enclosed <input type="text" style="padding-left: 10px;" size="3"> (number of documents) in support of proposed changes/corrections.</p>
+    I have enclosed <input type="text" style="padding-left: 10px;" size="3" id="po"> (number of documents) in support of proposed changes/corrections.</p>
     </td>
 </tr>
 <tr>
     <td></td>
-    <td colspan="2" style="font-weight: lighter;">Place <input type="text" style="padding-left: 10px;" size="30"></td>
+    <td colspan="2" style="font-weight: lighter;">Place <input type="text" style="padding-left: 10px;" size="30" id="pg"></td>
 </tr>
 <tr>
     <td></td>
@@ -818,7 +818,7 @@ and <select name="pr" id="pr" style="width: 500px;"><option value="pr">---Please
         Online Payment
     </td>
 </tr>
-</table>
+</table> 
 <p style="font-weight: lighter; padding-top:10px; padding-left: 5px;">For Paperless PAN Application
 <input type="radio" value="" id="radio" style="margin-left: 20px;">
 <label for="radio">Yes</label>
@@ -829,7 +829,7 @@ and <select name="pr" id="pr" style="width: 500px;"><option value="pr">---Please
     <input type="radio" value="" id="radio" style="margin-left: 20px;">
 <label for="radio">DSC</label>
 <select name="sel" id="sel" style="margin-left: 20px; width: 300px;"> <option value="sel">--Select--</option> </select>
-<span style="margin-left: 20px;"><u>Guidelines for DSC User</u></span> <br> <br>
+<span style="margin-left: 20px;"><u>Guidelines for DSC User</u></span> </div> <br>
 <div style="font-weight: lighter; padding-left: 05px;">
     Upload Photo
     <input type="file" name="" id="pho" style="padding-left: 200px;">
@@ -842,22 +842,22 @@ and <select name="pr" id="pr" style="width: 500px;"><option value="pr">---Please
     <p style="font-weight: lighter; padding-left: 420px; display: inline;">OR</p>
 </div>
 <div>
-<input type="text" name="" class="textBox" style="margin-left: 06px;padding-top: 05px; height: 30px;" size="20">
+<input type="text" name="textbox" class="textBox" style="margin-left: 06px;padding-top: 05px; height: 30px;" size="20">
 </div>
 <div style="font-weight: lighter; padding-top: 10px; padding-left: 05px;">
-    ALREADY UPLOADED PHOTO:
-    <input type="text" name="" id="" style="margin-left: 300px;" size="40">
+     <label for="abcd"> ALREADY UPLOADED PHOTO:</label>
+    <input type="text" name="abcd" id="abcd" style="margin-left: 300px;" size="40">
 </div>
 <div style="font-weight: lighter; padding-top: 10px; padding-left: 05px;">
-    ALREADY UPLOADED SIGNATURE:
-    <input type="text" name="" id="" style="margin-left: 265px;" size="30">
+   <label for="abc"> ALREADY UPLOADED SIGNATURE:</label>
+    <input type="text" name="abc" id="abc" style="margin-left: 265px;" size="30">
 </div>
 <div style="font-weight: lighter; padding-top: 10px; padding-left: 05px;">
     <label for="ne">ALREADY UPLOADED DOCUMENTS:</label>
     <input type="text" name="" id="ne" style="margin-left: 254px; height: 30px; padding-top: 120px;" size="60">
 </div>
 <div>
-    <input type="submit" value="Submit" size="20" style="margin-left: 725px;">
+    <input type="submit" value="Submit" size="20" style="margin-left: 725px;" name="submit">
 </div>
 <hr style="padding-bottom: 10px; margin-top: 10px">
 </div>
