@@ -1,0 +1,69 @@
+
+.navbar{
+    max-height:3em !important;
+    margin-left:7em !important;
+    background-color: #212529 !important;
+    position: relative;
+}
+.navbar  a {
+    font-size: 25px !important;
+    position: relative !important;
+    font-weight: lighter;
+    color: rgb(241, 247, 246) !important;
+    margin-left: 0.5em !important;
+    border: 0em !important;
+    font-weight: lighter;
+}
+.navbar  button {
+    position: relative !important;
+    font-size: 0.7em !important;
+    max-width: 3em !important;
+    max-height: 3em !important;
+    background-color: white !important;
+    color: rgb(212, 134, 9) !important;    
+}
+.navbar span{
+    margin-left: -0.4em !important;
+}
+.navbar-nav
+{
+padding: 0em !important;
+}
+
+.row1
+{
+    padding-top: 8em !important;
+    padding-bottom: 10em !important;
+}
+.row2 p
+{
+font-size: small !important;
+}
+.span1 {
+    margin-top:50px;
+    display:flex;   
+  }
+  .span1:before, .span1:after {
+    color:white;
+    content:'';
+    flex:1;
+    border-bottom:groove 2px;
+    margin:auto 0.25em;   
+  }
+  ul span
+  {
+      padding-left: 10px !important;
+      font-size: x-large !important;
+      font-weight: lighter !important;
+  }
+  li i{
+      font-size: 7px !important;
+      padding-top: 08px !important;
+  }
+.row3
+{
+    margin-top: 5em !important;
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+    font-size: x-small !important;
+}
