@@ -1,3 +1,0 @@
-# B251WD
-
-PANCARD HTML
