@@ -1,0 +1,23 @@
+.star
+{
+    color: sandybrown;
+}
+
+.star:hover
+{
+    color: green;
+    cursor: pointer;
+}
+.new
+{
+    padding: 1em;
+    font-weight: lighter;
+}
+table td {
+    text-align: center;
+    }
+table {
+        table-layout: fixed;
+        word-wrap: break-word;
+    }
+  
