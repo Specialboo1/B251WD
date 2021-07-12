@@ -3,6 +3,14 @@
       font-size: 06px;
     }
   }
+.errspan {
+    float: right;
+    margin-left: -35px;
+    margin-top: 0px;
+    position: relative;
+    z-index: 2;
+    color: black;
+}
 .star
 {
     color: sandybrown;
